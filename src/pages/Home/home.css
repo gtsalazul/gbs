@@ -1,0 +1,43 @@
+.lista-products {
+    max-width: 800px;
+    margin: 14px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.lista-products div {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.lista-products h3 {
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+}
+
+.lista-products a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 24px;
+    background-color: #116FEB;
+    text-decoration: none;
+    color: #fff;
+}
+
+.lista-products span {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 25px;
+    display: block;
+}
+
+.lista-products img {
+    width: 100%;
+    object-fit: cover;
+}

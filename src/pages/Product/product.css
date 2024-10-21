@@ -1,0 +1,41 @@
+.produto-info {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 0 8px;
+}
+
+.produto-info h1 {
+    margin: 14px 0;
+}
+
+.produto-info img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.produto-info p {
+    font-size: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.area-buttons button {
+    margin-right: 12px;
+    margin-top: 14px;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.area-buttons button a {
+    text-decoration: none;
+    color: #1755c7;
+}
+
+.area-buttons button:hover {
+    background-color: #fff;
+}
