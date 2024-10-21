@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./favoritos.css";
+import { toast } from "react-toastify";
 
 export const Favoritos = () => {
+    // useState() inicializa products como um array vazio.
     // useState() inicializa products como um array vazio.
     const [products, setProducts] = useState([]);
 
     // useEffect() é usado para carregar os produtos salvos do localStorage assim que o componente é montado.
+    // useEffect() é usado para carregar os produtos salvos do localStorage assim que o componente é montado.
     useEffect(() => {
+        // Os produtos são convertidos de volta de JSON para um array de objetos e armazenados em products.
         // Os produtos são convertidos de volta de JSON para um array de objetos e armazenados em products.
         const minhaLista = localStorage.getItem("@produtos");
         const produtosSalvos = JSON.parse(minhaLista) || [];
@@ -16,12 +20,14 @@ export const Favoritos = () => {
 
     function excluir(id) {
         // excluir(id) filtra os produtos removendo aquele com o id fornecido e atualiza o estado e o localStorage.
+        // excluir(id) filtra os produtos removendo aquele com o id fornecido e atualiza o estado e o localStorage.
         let filtroProdutos = products.filter((item) => {
             return (item.id !== id);
         });
         setProducts(filtroProdutos);
         toast.success("Produto excluído com sucesso");
         localStorage.setItem("@produtos", JSON.stringify(filtroProdutos));
+        toast.warn("Produto excluído com sucesso!");
         // Exibe uma mensagem de sucesso ao remover o produto usando toast.
     }
 

@@ -39,7 +39,7 @@ export const Product = () => {
         // Verifica se o produto já está salvo utilizando some().
         const hasProduct = produtosSalvos.some((produto) => produto.id === product.id);
         if(hasProduct) {
-            toast.warn("Este produto já foi salvo");
+            toast.error("Este produto já foi salvo");
             return;
         }
         // Caso não esteja, o produto é adicionado à lista e salvo novamente no localStorage.
