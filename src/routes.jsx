@@ -7,12 +7,15 @@ import { Favoritos } from "./pages/Favoritos/Favoritos";
 
 export const RoutesApp = () => {
     return ( 
-        <BrowserRouter>
+        // para definir a navegação na aplicação, permitindo que as URLs sejam interpretadas pelo React Router
+        <BrowserRouter> 
         <Header />
+        {/* que define as diferentes rotas da aplicação */}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/product/:id" element={<Product />} />
                 <Route path="/favoritos" element={<Favoritos />} />
+                {/* para capturar qualquer caminho não especificado */}
                 <Route path="*" element={<Error />} />
             </Routes>
         </BrowserRouter>

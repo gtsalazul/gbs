@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import "./home.css";
 
 export const Home = () => {
+    // useState() inicializa products como um array vazio.
     const [products, setProducts] = useState([]);
     
+    // useEffect() carrega a lista de produtos ao montar o componente.
     useEffect(() => {
+        // A função loadProducts() faz uma requisição à API para obter os produtos e atualiza o estado com os 15 primeiros produtos retornados.
         async function loadProducts() {
             const response = await api.get("products/");
             setProducts(response.data.products.slice(0, 15));
@@ -17,6 +20,7 @@ export const Home = () => {
     return ( 
         <div className="container">
             <div className="lista-products">
+            {/* Mapeia os produtos armazenados em products para exibir cada um com imagem, título, preço e um link que direciona para a página de detalhes do produto. */}
                 {products.map((product) => {
                     return (
                         <div key={product.id} className="product">
