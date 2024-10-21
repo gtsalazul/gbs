@@ -25,7 +25,6 @@ export const Favoritos = () => {
             return (item.id !== id);
         });
         setProducts(filtroProdutos);
-        toast.success("Produto excluído com sucesso");
         localStorage.setItem("@produtos", JSON.stringify(filtroProdutos));
         toast.warn("Produto excluído com sucesso!");
         // Exibe uma mensagem de sucesso ao remover o produto usando toast.
